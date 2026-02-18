@@ -1,17 +1,15 @@
 import React from 'react'
-import Header from './components/Header/Header'
-import Home from './components/Home/Home'
-import About from './components/About/About'
-import Footer from './components/Footer/Footer'
+import UserContextProvider from './context/UserContextProvider'
+import Profile from './components/Profile'
+import Login from './components/Login'
 
 const App = () => {
   return (
-    <>
-    <Header />
-    <Home />
-    
-    <Footer />
-    </>
+    <UserContextProvider>
+      <h1>Context API</h1>
+      <Login />
+      <Profile />     
+    </UserContextProvider>
   )
 }
 
